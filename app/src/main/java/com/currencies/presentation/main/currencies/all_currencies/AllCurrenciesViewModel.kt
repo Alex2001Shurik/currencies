@@ -33,4 +33,18 @@ class AllCurrenciesViewModel(
             }
         }
     }
+
+    fun addCurrency(currencyName: String) {
+        viewModelScope.launch {
+            allCurrencyInteractor.addCurrency(currencyName)
+                .onFailure { error.value = it }
+        }
+    }
+
+    fun removeCurrency(currencyName: String) {
+        viewModelScope.launch {
+            allCurrencyInteractor.removeCurrency(currencyName)
+                .onFailure { error.value = it }
+        }
+    }
 }

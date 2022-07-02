@@ -11,9 +11,9 @@ import org.koin.android.ext.android.inject
 
 abstract class BaseCurrenciesFragment : Fragment(R.layout.fragment_currencies) {
 
-    private val binding by viewBinding(FragmentCurrenciesBinding::bind)
+    val binding by viewBinding(FragmentCurrenciesBinding::bind)
 
-    private val mainNavigator by inject<MainNavigator>()
+    val mainNavigator by inject<MainNavigator>()
 
     abstract val titleRes: Int
 

@@ -6,4 +6,5 @@
     <dimen name="dp32">32dp</dimen>
 
     <dimen name="sp26">26sp</dimen>
+    <dimen name="sp20">20sp</dimen>
 </resources>

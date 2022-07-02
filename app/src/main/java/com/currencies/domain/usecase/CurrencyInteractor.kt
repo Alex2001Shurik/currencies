@@ -31,4 +31,12 @@ class CurrencyInteractor(
     suspend fun getCurrencies() = wrapResult {
         currencies.emit(allCurrencyRepository.getAndSaveCurrencies())
     }
+
+    suspend fun addCurrency(currencyName: String) = wrapResult {
+        myCurrenciesRepository.addCurrency(currencyName)
+    }
+
+    suspend fun removeCurrency(currencyName: String) = wrapResult {
+        myCurrenciesRepository.removeCurrency(currencyName)
+    }
 }

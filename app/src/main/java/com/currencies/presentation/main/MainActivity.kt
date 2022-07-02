@@ -36,9 +36,8 @@ class MainActivity : AppCompatActivity(), ShowHideNavigationCallback {
         binding.bottomNavView.setOnItemSelectedListener(mainNavigator::onTabSelected)
     }
 
-    override fun showNavigation() = with(binding.bottomNavView) {
-        isVisible = true
-        startAnimation(AnimationUtils.loadAnimation(this@MainActivity, R.anim.view_show))
+    override fun showNavigation() {
+        binding.bottomNavView.isVisible = true
     }
 
     override fun hideNavigation() = with(binding.bottomNavView) {
