@@ -1,4 +1,4 @@
-package com.currencies.presentation.view_binding
+package com.currencies.utils.view_binding
 
 import android.view.View
 import androidx.fragment.app.Fragment

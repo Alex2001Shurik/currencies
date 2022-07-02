@@ -1,18 +1,19 @@
-package com.currencies.presentation.main
+package com.currencies.presentation.main.currencies
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.currencies.R
 import com.currencies.databinding.FragmentCurrenciesBinding
-import com.currencies.presentation.view_binding.viewBinding
+import com.currencies.presentation.main.MainNavigator
+import com.currencies.utils.view_binding.viewBinding
 import org.koin.android.ext.android.inject
 
 abstract class BaseCurrenciesFragment : Fragment(R.layout.fragment_currencies) {
 
     private val binding by viewBinding(FragmentCurrenciesBinding::bind)
 
-    private val mainNavigator by inject<CurrenciesNavigator>()
+    private val mainNavigator by inject<MainNavigator>()
 
     abstract val titleRes: Int
 

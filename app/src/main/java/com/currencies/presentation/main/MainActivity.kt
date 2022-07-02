@@ -7,7 +7,7 @@ import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import com.currencies.R
 import com.currencies.databinding.ActivityMainBinding
-import com.currencies.presentation.view_binding.viewBinding
+import com.currencies.utils.view_binding.viewBinding
 import org.koin.android.ext.android.inject
 import org.koin.core.context.loadKoinModules
 import org.koin.core.context.unloadKoinModules
@@ -18,10 +18,10 @@ class MainActivity : AppCompatActivity(), ShowHideNavigationCallback {
     private val binding by viewBinding(ActivityMainBinding::inflate)
 
     private val mainNavigationModule = module {
-        single { CurrenciesNavigator(supportFragmentManager, R.id.container) }
+        single { MainNavigator(supportFragmentManager, R.id.container) }
     }
 
-    private val mainNavigator by inject<CurrenciesNavigator>()
+    private val mainNavigator by inject<MainNavigator>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
