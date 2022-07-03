@@ -1,16 +1,16 @@
 package com.currencies.presentation.main.currencies.all_currencies.adapter
 
-import androidx.recyclerview.widget.RecyclerView
 import com.currencies.databinding.ViewHolderCurrencyBinding
 import com.currencies.domain.entity.AllCurrency
+import com.currencies.presentation.main.currencies.base.BaseCurrenciesViewHolder
 
 class AllCurrenciesViewHolder(
     val binding: ViewHolderCurrencyBinding
-) : RecyclerView.ViewHolder(binding.root) {
+) : BaseCurrenciesViewHolder<AllCurrency>(binding) {
 
-    fun bind(allCurrency: AllCurrency) = with(binding) {
-        setIsAdded(allCurrency.isAdded)
-        tvCurrency.text = allCurrency.currencyName
+    override fun bind(currency: AllCurrency) = with(binding) {
+        setIsAdded(currency.isAdded)
+        tvCurrency.text = currency.currencyName
     }
 
     fun onPayloads(payloads: MutableList<Any>) {

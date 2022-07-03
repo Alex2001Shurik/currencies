@@ -1,4 +1,4 @@
-package com.currencies.presentation.main.currencies.all_currencies.adapter
+package com.currencies.presentation.main.currencies.base
 
 import android.content.Context
 import android.graphics.Canvas
@@ -9,7 +9,7 @@ import androidx.core.view.children
 import androidx.recyclerview.widget.RecyclerView
 import com.currencies.R
 
-class AllCurrenciesDividerDecoration(context: Context) : RecyclerView.ItemDecoration() {
+class CurrenciesDividerDecoration(context: Context) : RecyclerView.ItemDecoration() {
 
     private val divider = requireNotNull(ContextCompat.getDrawable(context, R.drawable.divider))
     private val dividerPadding = context.resources.getDimensionPixelSize(R.dimen.dp16)

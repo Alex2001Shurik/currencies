@@ -4,6 +4,7 @@
     <dimen name="dp16">16dp</dimen>
     <dimen name="dp24">24dp</dimen>
     <dimen name="dp32">32dp</dimen>
+    <dimen name="height_view_holder">50dp</dimen>
 
     <dimen name="sp26">26sp</dimen>
     <dimen name="sp20">20sp</dimen>

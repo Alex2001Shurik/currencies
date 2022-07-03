@@ -17,5 +17,5 @@ interface MyCurrenciesDao {
     suspend fun removeCurrency(currencyName: String)
 
     @Query("select * from my_currency")
-    fun getAll(): Flow<List<MyCurrencyDB>>
+    fun getAllFlow(): Flow<List<MyCurrencyDB>>
 }

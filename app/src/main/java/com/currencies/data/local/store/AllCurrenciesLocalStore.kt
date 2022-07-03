@@ -10,7 +10,9 @@ class AllCurrenciesLocalStore(
     private val allCurrenciesDao: AllCurrenciesDao
 ) {
 
-    fun getAllFlow() = allCurrenciesDao.getAll().map { it.toDomain() }
+    suspend fun search(query: String): List<Currency> {
+        return allCurrenciesDao.search(query).map { it.toDomain() }
+    }
 
     suspend fun putAll(currencies: List<Currency>) {
         allCurrenciesDao.putAll(currencies.map { it.toAllCurrencyDb() })

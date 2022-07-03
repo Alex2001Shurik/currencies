@@ -2,17 +2,18 @@ package com.currencies.presentation.main.currencies.all_currencies.adapter
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
 import com.currencies.databinding.ViewHolderCurrencyBinding
 import com.currencies.domain.entity.AllCurrency
+import com.currencies.presentation.main.currencies.base.BaseCurrenciesAdapter
+import com.currencies.presentation.main.currencies.base.CurrencyCallback
 import com.currencies.utils.debounceIn
 import com.currencies.utils.inflater
 import kotlinx.coroutines.CoroutineScope
 
 class AllCurrenciesAdapter(
     private val scope: CoroutineScope,
-    private val callback: Callback
-) : ListAdapter<AllCurrency, AllCurrenciesViewHolder>(DiffUtilCallback()) {
+    private val callback: CurrencyCallback
+) : BaseCurrenciesAdapter<AllCurrency, AllCurrenciesViewHolder>(DiffUtilCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AllCurrenciesViewHolder {
         return AllCurrenciesViewHolder(
@@ -33,10 +34,6 @@ class AllCurrenciesAdapter(
                 }
             }
         }
-    }
-
-    override fun onBindViewHolder(holder: AllCurrenciesViewHolder, position: Int) {
-        holder.bind(getItem(position))
     }
 
     override fun onBindViewHolder(
@@ -65,11 +62,5 @@ class AllCurrenciesAdapter(
                 else -> null
             }
         }
-    }
-
-    interface Callback {
-        fun onAddCurrency(currencyName: String)
-        fun onRemoveCurrency(currencyName: String)
-        fun onItem(currencyName: String)
     }
 }
