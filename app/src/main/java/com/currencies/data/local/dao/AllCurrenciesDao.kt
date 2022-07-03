@@ -5,7 +5,6 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.currencies.data.local.entity.AllCurrencyDB
-import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface AllCurrenciesDao {
@@ -13,6 +12,18 @@ interface AllCurrenciesDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun putAll(currencies: List<AllCurrencyDB>)
 
-    @Query("select * from all_currency")
-    fun getAll(): Flow<List<AllCurrencyDB>>
+    @Query(SEARCH)
+    suspend fun search(query: String, escaped: String = "%$query%"): List<AllCurrencyDB>
+
+    companion object {
+        private const val SEARCH =
+            """
+        select * from all_currency 
+        where UPPER(currencyName) like UPPER(:escaped)
+        order by case
+        when UPPER(currencyName) == UPPER(:query) then 1
+        when UPPER(currencyName) like UPPER(:escaped) then 2
+        end
+        """
+    }
 }

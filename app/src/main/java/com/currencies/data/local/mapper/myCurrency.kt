@@ -5,4 +5,4 @@ import com.currencies.domain.entity.Currency
 
 fun List<MyCurrencyDB>.toDomain() = map { it.toDomain() }
 
-fun MyCurrencyDB.toDomain() = Currency(currencyName)
+private fun MyCurrencyDB.toDomain() = Currency(currencyName)

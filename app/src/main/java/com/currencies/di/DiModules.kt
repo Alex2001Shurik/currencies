@@ -17,8 +17,10 @@ import com.currencies.domain.repository.AllCurrenciesRepository
 import com.currencies.domain.repository.AllCurrenciesRepositoryImpl
 import com.currencies.domain.repository.MyCurrenciesRepository
 import com.currencies.domain.repository.MyCurrenciesRepositoryImpl
-import com.currencies.domain.usecase.CurrencyInteractor
-import com.currencies.presentation.main.currencies.all_currencies.AllCurrenciesViewModel
+import com.currencies.domain.usecase.AllCurrenciesInteractor
+import com.currencies.domain.usecase.MyCurrenciesInteractor
+import com.currencies.presentation.main.currencies.base.CurrenciesViewModel
+import com.currencies.presentation.main.currencies.base.Qualifier
 import com.google.gson.Gson
 import kotlinx.coroutines.Dispatchers
 import org.koin.android.ext.koin.androidContext
@@ -53,11 +55,13 @@ private val repositoryModule = module {
 private val useCaseModule = module {
     single { Dispatchers.IO }
     single { UseCaseScopeImpl(get()) } bind UseCaseScope::class
-    factory { CurrencyInteractor(get(), get(), get()) }
+    factory { AllCurrenciesInteractor(get(), get(), get()) }
+    factory { MyCurrenciesInteractor(get(), get()) }
 }
 
 private val viewModelModule = module {
-    viewModel { AllCurrenciesViewModel(get()) }
+    viewModel(Qualifier.MyCurrencies) { CurrenciesViewModel(get<MyCurrenciesInteractor>()) }
+    viewModel(Qualifier.AllCurrencies) { CurrenciesViewModel(get<AllCurrenciesInteractor>()) }
 }
 
 fun setupDependencyFramework(application: Application) {

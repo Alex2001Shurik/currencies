@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">Currencies</string>
-    <string name="all">All</string>
-    <string name="my">My</string>
     <string name="all_currencies">All currencies</string>
     <string name="my_currencies">My currencies</string>
     <string name="convert">Convert</string>

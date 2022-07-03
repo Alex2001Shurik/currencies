@@ -15,6 +15,7 @@ class AllCurrenciesRepositoryImpl(
         }
     }
 
-    // todo search
-    override fun subscribe() = localCurrenciesStore.getAllFlow()
+    override suspend fun searchCurrencies(query: String): List<Currency> {
+        return localCurrenciesStore.search(query)
+    }
 }

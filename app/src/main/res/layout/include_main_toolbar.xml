@@ -12,29 +12,44 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/tvTitle"
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:searchHintIcon="@drawable/ic_search_16dp"
+            app:searchIcon="@drawable/ic_search_16dp"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp24"
-            android:textColor="@color/white"
-            android:textSize="@dimen/sp26"
+            android:layout_marginStart="@dimen/dp16"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="@string/all_currencies" />
+            app:srcCompat="@drawable/ic_back_white_32dp" />
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/ivSearch"
+        <TextView
+            android:id="@+id/tvCenteredTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/dp16"
-            android:padding="@dimen/dp8"
+            android:layout_gravity="center"
             android:textColor="@color/white"
+            android:textSize="@dimen/sp26"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_search_16dp" />
+            tools:text="@string/convert" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

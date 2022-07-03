@@ -9,7 +9,7 @@ class MyCurrenciesLocalStore(
     private val myCurrenciesDao: MyCurrenciesDao
 ) {
 
-    fun getAllFlow() = myCurrenciesDao.getAll().map { it.toDomain() }
+    fun getAllFlow() = myCurrenciesDao.getAllFlow().map { it.toDomain() }
 
     suspend fun put(currencyName: String) {
         myCurrenciesDao.addCurrency(MyCurrencyDB(currencyName))

@@ -5,4 +5,17 @@
         <item name="android:navigationBarColor">@color/status_bar_color</item>
     </style>
 
+    <style name="ToggleAddRemoveStyle">
+        <item name="android:background">@drawable/selector_action</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textOff">@string/add</item>
+        <item name="android:textOn">@string/remove</item>
+    </style>
+
+    <string name="remove">Remove</string>
+    <string name="add">Add</string>
 </resources>
