@@ -12,13 +12,18 @@ import com.currencies.data.remote.LoggingInterceptor
 import com.currencies.data.remote.api
 import com.currencies.data.remote.httpClient
 import com.currencies.data.remote.retrofit
+import com.currencies.data.remote.store.ConvertStore
 import com.currencies.data.remote.store.CurrenciesCloudStore
 import com.currencies.domain.repository.AllCurrenciesRepository
 import com.currencies.domain.repository.AllCurrenciesRepositoryImpl
+import com.currencies.domain.repository.ConvertRepository
+import com.currencies.domain.repository.ConvertRepositoryImpl
 import com.currencies.domain.repository.MyCurrenciesRepository
 import com.currencies.domain.repository.MyCurrenciesRepositoryImpl
 import com.currencies.domain.usecase.AllCurrenciesInteractor
+import com.currencies.domain.usecase.ConvertUseCase
 import com.currencies.domain.usecase.MyCurrenciesInteractor
+import com.currencies.presentation.main.convert.ConvertViewModel
 import com.currencies.presentation.main.currencies.base.CurrenciesViewModel
 import com.currencies.presentation.main.currencies.base.Qualifier
 import com.google.gson.Gson
@@ -45,11 +50,13 @@ private val storeModule = module {
     single { CurrenciesCloudStore(get()) }
     single { AllCurrenciesLocalStore(get()) }
     single { MyCurrenciesLocalStore(get()) }
+    single { ConvertStore(get()) }
 }
 
 private val repositoryModule = module {
     single { AllCurrenciesRepositoryImpl(get(), get()) } bind AllCurrenciesRepository::class
     single { MyCurrenciesRepositoryImpl(get()) } bind MyCurrenciesRepository::class
+    single { ConvertRepositoryImpl(get()) } bind ConvertRepository::class
 }
 
 private val useCaseModule = module {
@@ -57,11 +64,13 @@ private val useCaseModule = module {
     single { UseCaseScopeImpl(get()) } bind UseCaseScope::class
     factory { AllCurrenciesInteractor(get(), get(), get()) }
     factory { MyCurrenciesInteractor(get(), get()) }
+    factory { ConvertUseCase(get(), get()) }
 }
 
 private val viewModelModule = module {
     viewModel(Qualifier.MyCurrencies) { CurrenciesViewModel(get<MyCurrenciesInteractor>()) }
     viewModel(Qualifier.AllCurrencies) { CurrenciesViewModel(get<AllCurrenciesInteractor>()) }
+    viewModel { (currencyName: String) -> ConvertViewModel(currencyName, get()) }
 }
 
 fun setupDependencyFramework(application: Application) {

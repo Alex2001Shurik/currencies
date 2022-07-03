@@ -1,4 +1,4 @@
-package com.currencies.presentation.main.callback
+package com.currencies.presentation.main
 
 import androidx.annotation.StringRes
 

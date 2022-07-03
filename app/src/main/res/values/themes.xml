@@ -16,6 +16,4 @@
         <item name="android:textOn">@string/remove</item>
     </style>
 
-    <string name="remove">Remove</string>
-    <string name="add">Add</string>
 </resources>
