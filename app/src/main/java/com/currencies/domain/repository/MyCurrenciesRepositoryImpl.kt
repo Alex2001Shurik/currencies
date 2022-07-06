@@ -1,6 +1,7 @@
 package com.currencies.domain.repository
 
 import com.currencies.data.local.store.MyCurrenciesLocalStore
+import com.currencies.data.repository.MyCurrenciesRepository
 
 class MyCurrenciesRepositoryImpl(
     private val myCurrenciesLocalStore: MyCurrenciesLocalStore

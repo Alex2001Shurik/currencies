@@ -1,6 +1,7 @@
 <resources>
     <style name="Theme.Currencies" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorAccent">@color/blue_light</item>
         <item name="android:statusBarColor">@color/status_bar_color</item>
         <item name="android:navigationBarColor">@color/status_bar_color</item>
     </style>

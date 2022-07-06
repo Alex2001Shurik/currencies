@@ -10,7 +10,7 @@ interface Api {
     @GET("/latest")
     suspend fun getLatestCurrencies(): GetLatestCurrenciesResponse
 
-    @GET("/convert?from=USD&to=EUR&amount=1200")
+    @GET("/convert")
     suspend fun getConvertAmount(
         @Query("from") from: String,
         @Query("to") to: String,

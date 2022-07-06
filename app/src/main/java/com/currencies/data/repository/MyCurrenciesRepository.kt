@@ -1,4 +1,4 @@
-package com.currencies.domain.repository
+package com.currencies.data.repository
 
 import com.currencies.domain.entity.Currency
 import kotlinx.coroutines.flow.Flow

@@ -9,4 +9,5 @@
     <color name="remove_btn_color">#E0E0E0</color>
     <color name="blue_light">#CDEFFC</color>
     <color name="black">#000000</color>
+    <color name="red">#FF0000</color>
 </resources>

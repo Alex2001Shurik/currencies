@@ -8,7 +8,8 @@ import kotlinx.coroutines.cancelChildren
 import kotlinx.coroutines.launch
 
 class ConvertViewModel(
-    private val currencyName: String,
+    private val fromCurrencyName: String,
+    private val toCurrencyName: String,
     private val convertUseCase: ConvertUseCase
 ) : BaseViewModel() {
 
@@ -19,7 +20,7 @@ class ConvertViewModel(
     fun convert(amount: Double) = with(searchScope) {
         coroutineContext.cancelChildren()
         launch {
-            convertUseCase.convert(currencyName, amount)
+            convertUseCase.launch(fromCurrencyName, toCurrencyName, amount)
                 .fold(
                     onSuccess = convertResult::setValue,
                     onFailure = error::setValue

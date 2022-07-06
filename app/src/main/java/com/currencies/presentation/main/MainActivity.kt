@@ -42,11 +42,9 @@ class MainActivity :
 
         if (savedInstanceState == null) {
             mainNavigator.openAllCurrenciesTab()
+            setupToolbarActions()
+            binding.bottomNavView.setOnItemSelectedListener(mainNavigator::onTabSelected)
         }
-
-        setupToolbarActions()
-
-        binding.bottomNavView.setOnItemSelectedListener(mainNavigator::onTabSelected)
     }
 
     override fun updateToolbar(toolbarOptions: ToolbarOptions) {

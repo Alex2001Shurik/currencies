@@ -58,9 +58,9 @@ class MainNavigator(
         openCurrencies(Page.AllCurrencies)
     }
 
-    fun openConvertPage(currencyName: String) {
+    fun openConvertPage(fromCurrencyName: String, toCurrencyName: String) {
         fragmentManager.beginTransaction()
-            .add(containerViewId, ConvertFragment.newInstance(currencyName))
+            .add(containerViewId, ConvertFragment.newInstance(fromCurrencyName, toCurrencyName))
             .addToBackStack(ConvertFragment::class.java.simpleName)
             .commit()
     }

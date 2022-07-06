@@ -15,7 +15,7 @@
         <entry key="app/src/main/res/drawable/ic_search_32dp.xml" value="0.162" />
         <entry key="app/src/main/res/drawable/selector_action.xml" value="0.117" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_convert.xml" value="0.17760416666666667" />
+        <entry key="app/src/main/res/layout/fragment_convert.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_currencies.xml" value="0.20412394205729173" />
         <entry key="app/src/main/res/layout/include_convert_toolbar.xml" value="0.17760416666666667" />
         <entry key="app/src/main/res/layout/include_main_toolbar.xml" value="0.33" />

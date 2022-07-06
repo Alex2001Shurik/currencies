@@ -49,7 +49,7 @@ abstract class BaseCurrenciesFragment<T : ICurrency> :
     }
 
     override fun onItem(currencyName: String) {
-        mainNavigator.openConvertPage(currencyName)
+        mainNavigator.openConvertPage(currencyName, viewModel.localCurrencyName)
         hideNavigation()
     }
 

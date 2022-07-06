@@ -22,7 +22,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:searchHintIcon="@drawable/ic_search_16dp"
+            app:queryHint="@string/search_currency"
+            app:searchHintIcon="@null"
             app:searchIcon="@drawable/ic_search_16dp"
             tools:visibility="visible" />
 

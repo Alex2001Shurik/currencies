@@ -7,4 +7,7 @@
     <string name="missing_connection">Missing connection</string>
     <string name="remove">Remove</string>
     <string name="add">Add</string>
+    <string name="format_float">%.2f</string>
+    <string name="retry">Retry</string>
+    <string name="search_currency">Search currency</string>
 </resources>
