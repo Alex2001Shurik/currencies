@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ShimmerStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:shimmer_base_alpha="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/placeholder_currency" />
+
+        <include layout="@layout/placeholder_currency" />
+
+        <include layout="@layout/placeholder_currency" />
+
+        <include layout="@layout/placeholder_currency" />
+
+        <include layout="@layout/placeholder_currency" />
+
+        <include layout="@layout/placeholder_currency" />
+
+        <include layout="@layout/placeholder_currency" />
+
+        <include layout="@layout/placeholder_currency" />
+
+        <include layout="@layout/placeholder_currency" />
+
+        <include layout="@layout/placeholder_currency" />
+
+        <include layout="@layout/placeholder_currency" />
+
+        <include layout="@layout/placeholder_currency" />
+
+    </LinearLayout>
+</com.facebook.shimmer.ShimmerFrameLayout>

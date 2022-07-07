@@ -2,7 +2,7 @@ package com.currencies.presentation.main.currencies.all_currencies.adapter
 
 import com.currencies.databinding.ViewHolderCurrencyBinding
 import com.currencies.domain.entity.AllCurrency
-import com.currencies.presentation.main.currencies.base.BaseCurrenciesViewHolder
+import com.currencies.presentation.main.currencies.base.adapter.BaseCurrenciesViewHolder
 
 class AllCurrenciesViewHolder(
     val binding: ViewHolderCurrencyBinding

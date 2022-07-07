@@ -2,6 +2,7 @@ package com.currencies.domain.repository
 
 import com.currencies.data.local.store.AllCurrenciesLocalStore
 import com.currencies.data.remote.store.CurrenciesCloudStore
+import com.currencies.data.repository.AllCurrenciesRepository
 import com.currencies.domain.entity.Currency
 
 class AllCurrenciesRepositoryImpl(

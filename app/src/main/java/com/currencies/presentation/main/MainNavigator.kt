@@ -14,7 +14,7 @@ class MainNavigator(
     @IdRes private val containerViewId: Int,
 ) {
 
-    enum class Page(val id: Int) {
+    private enum class Page(val id: Int) {
         AllCurrencies(R.id.tabAllCurrencies),
         MyCurrencies(R.id.tabMyCurrencies);
 
@@ -58,9 +58,9 @@ class MainNavigator(
         openCurrencies(Page.AllCurrencies)
     }
 
-    fun openConvertPage() {
+    fun openConvertPage(fromCurrencyName: String, toCurrencyName: String) {
         fragmentManager.beginTransaction()
-            .add(containerViewId, ConvertFragment.newInstance())
+            .add(containerViewId, ConvertFragment.newInstance(fromCurrencyName, toCurrencyName))
             .addToBackStack(ConvertFragment::class.java.simpleName)
             .commit()
     }

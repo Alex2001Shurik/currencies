@@ -1,8 +1,26 @@
 <resources>
     <style name="Theme.Currencies" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorAccent">@color/blue_light_alpha_30</item>
+        <item name="colorControlHighlight">@color/blue_light_alpha_30</item>
         <item name="android:statusBarColor">@color/status_bar_color</item>
         <item name="android:navigationBarColor">@color/status_bar_color</item>
+        <item name="android:textViewStyle">@style/SansProTextViewStyle</item>
+        <item name="editTextStyle">@style/SansProEditTextViewStyle</item>
+    </style>
+
+    <style name="ShimmerStyle">
+        <item name="shimmer_base_alpha">0.4</item>
+        <item name="shimmer_duration">1400</item>
+        <item name="shimmer_highlight_alpha">0.9</item>
+        <item name="shimmer_repeat_delay">200</item>
+    </style>
+
+    <style name="SansProTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+    </style>
+
+    <style name="SansProEditTextViewStyle" parent="android:Widget.EditText">
+        <item name="android:fontFamily">@font/source_sans_pro</item>
     </style>
 
     <style name="ToggleAddRemoveStyle">
@@ -16,6 +34,4 @@
         <item name="android:textOn">@string/remove</item>
     </style>
 
-    <string name="remove">Remove</string>
-    <string name="add">Add</string>
 </resources>

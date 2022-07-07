@@ -1,4 +1,4 @@
-package com.currencies.presentation.main.currencies.base
+package com.currencies.presentation.main.currencies.base.adapter
 
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding

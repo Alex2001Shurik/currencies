@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_view_holder"
+    android:layout_marginHorizontal="@dimen/dp16">
+
+    <View
+        android:id="@+id/togglePlaceholderAction"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/dp16"
+        android:background="@drawable/bg_placeholder_4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:textColor="@color/black"
+        android:background="@drawable/bg_placeholder_4dp"
+        android:textSize="@dimen/sp20"
+        app:layout_constraintBottom_toBottomOf="@+id/togglePlaceholderAction"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/togglePlaceholderAction" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@drawable/bg_placeholder_4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

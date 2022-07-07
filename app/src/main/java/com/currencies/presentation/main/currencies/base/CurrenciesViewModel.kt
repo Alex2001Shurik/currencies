@@ -4,11 +4,13 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.currencies.core.BaseViewModel
 import com.currencies.domain.entity.ICurrency
+import com.currencies.domain.usecase.GetLocalCurrencyUseCase
 import com.currencies.domain.usecase.ICurrencyInteractor
 import kotlinx.coroutines.launch
 
 class CurrenciesViewModel<T : ICurrency>(
-    private val currencyInteractor: ICurrencyInteractor<T>
+    private val currencyInteractor: ICurrencyInteractor<T>,
+    private val localCurrencyUseCase: GetLocalCurrencyUseCase
 ) : BaseViewModel() {
 
     init {
@@ -17,8 +19,13 @@ class CurrenciesViewModel<T : ICurrency>(
     }
 
     val currencies = MutableLiveData<List<T>>()
+    var localCurrencyName = ""
 
     private fun init() {
+        viewModelScope.launch {
+            localCurrencyUseCase.launch()
+                .onSuccess { localCurrencyName = it }
+        }
         viewModelScope.launch {
             currencyInteractor.init()
                 .onFailure { error.value = it }

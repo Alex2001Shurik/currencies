@@ -4,8 +4,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import com.currencies.databinding.ViewHolderMyCurrencyBinding
 import com.currencies.domain.entity.Currency
-import com.currencies.presentation.main.currencies.base.BaseCurrenciesAdapter
-import com.currencies.presentation.main.currencies.base.OnCurrencyClickCallback
+import com.currencies.presentation.main.currencies.base.adapter.BaseCurrenciesAdapter
+import com.currencies.presentation.main.currencies.base.adapter.OnCurrencyClickCallback
 import com.currencies.utils.inflater
 
 class MyCurrenciesAdapter(
