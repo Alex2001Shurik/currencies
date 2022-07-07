@@ -7,8 +7,8 @@ import com.currencies.domain.entity.AllCurrency
 import com.currencies.presentation.main.currencies.all_currencies.adapter.AllCurrenciesAdapter
 import com.currencies.presentation.main.currencies.base.BaseCurrenciesFragment
 import com.currencies.presentation.main.currencies.base.CurrenciesViewModel
-import com.currencies.presentation.main.currencies.base.CurrencyCallback
 import com.currencies.presentation.main.currencies.base.Qualifier
+import com.currencies.presentation.main.currencies.base.adapter.CurrencyCallback
 import com.currencies.utils.observe
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

@@ -10,4 +10,5 @@
     <string name="format_float">%.2f</string>
     <string name="retry">Retry</string>
     <string name="search_currency">Search currency</string>
+    <string name="no_results">No results</string>
 </resources>

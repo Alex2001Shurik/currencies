@@ -7,21 +7,25 @@
         <entry key="app/src/main/res/drawable-v24/ic_search.xml" value="0.162" />
         <entry key="app/src/main/res/drawable/bg_add.xml" value="0.117" />
         <entry key="app/src/main/res/drawable/bg_remove.xml" value="0.117" />
+        <entry key="app/src/main/res/drawable/bg_toolbar_drow_shadpw.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/divider.xml" value="0.117" />
         <entry key="app/src/main/res/drawable/ic_back_white_32dp.xml" value="0.162" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.162" />
         <entry key="app/src/main/res/drawable/ic_remove_20dp.xml" value="0.162" />
         <entry key="app/src/main/res/drawable/ic_search_16dp.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_search_32dp.xml" value="0.162" />
+        <entry key="app/src/main/res/drawable/placeholder_12dp.xml" value="0.1565" />
         <entry key="app/src/main/res/drawable/selector_action.xml" value="0.117" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_convert.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_currencies.xml" value="0.20412394205729173" />
+        <entry key="app/src/main/res/layout/fragment_currencies.xml" value="0.25919117647058826" />
         <entry key="app/src/main/res/layout/include_convert_toolbar.xml" value="0.17760416666666667" />
         <entry key="app/src/main/res/layout/include_main_toolbar.xml" value="0.33" />
         <entry key="app/src/main/res/layout/include_toolbar.xml" value="0.19895833333333332" />
+        <entry key="app/src/main/res/layout/placeholder_currency.xml" value="0.14583333333333334" />
+        <entry key="app/src/main/res/layout/placeholders_currency.xml" value="0.2025862068965517" />
         <entry key="app/src/main/res/layout/view_holder_currency.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/view_holder_my_currency.xml" value="0.5163899739583334" />
+        <entry key="app/src/main/res/layout/view_holder_my_currency.xml" value="0.5026929982046678" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.162" />
       </map>

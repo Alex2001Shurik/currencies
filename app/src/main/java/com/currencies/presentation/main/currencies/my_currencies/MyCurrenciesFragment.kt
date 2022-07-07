@@ -7,8 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.currencies.domain.entity.Currency
 import com.currencies.presentation.main.currencies.base.BaseCurrenciesFragment
 import com.currencies.presentation.main.currencies.base.CurrenciesViewModel
-import com.currencies.presentation.main.currencies.base.OnCurrencyClickCallback
 import com.currencies.presentation.main.currencies.base.Qualifier
+import com.currencies.presentation.main.currencies.base.adapter.OnCurrencyClickCallback
 import com.currencies.presentation.main.currencies.my_currencies.adapter.MyCurrenciesAdapter
 import com.currencies.presentation.main.currencies.my_currencies.adapter.SwipeToDeleteCallback
 import com.currencies.utils.observe

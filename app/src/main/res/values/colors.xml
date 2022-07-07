@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_500">#FF6200EE</color>
     <color name="white">#FFFFFFFF</color>
     <color name="status_bar_color">#465158</color>
     <color name="grey">#979797</color>
@@ -8,6 +7,8 @@
     <color name="add_btn_color">#BDBDBD</color>
     <color name="remove_btn_color">#E0E0E0</color>
     <color name="blue_light">#CDEFFC</color>
+    <color name="blue_light_alpha_30">#4DCDEFFC</color>
     <color name="black">#000000</color>
     <color name="red">#FF0000</color>
+    <color name="shadow_color">#80333333</color>
 </resources>

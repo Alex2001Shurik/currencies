@@ -39,11 +39,11 @@ class MainActivity :
         setContentView(binding.root)
 
         loadKoinModules(mainNavigationModule)
+        setupToolbarActions()
+        binding.bottomNavView.setOnItemSelectedListener(mainNavigator::onTabSelected)
 
         if (savedInstanceState == null) {
             mainNavigator.openAllCurrenciesTab()
-            setupToolbarActions()
-            binding.bottomNavView.setOnItemSelectedListener(mainNavigator::onTabSelected)
         }
     }
 

@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import com.currencies.R
 import com.currencies.databinding.FragmentConvertBinding
 import com.currencies.presentation.main.ToolbarOptions
+import com.currencies.presentation.main.callback.fragment.ChildrenHideNavigationCallback
 import com.currencies.presentation.main.callback.fragment.ChildrenUpdateToolbarCallback
 import com.currencies.utils.observe
 import com.currencies.utils.showError
@@ -19,7 +20,10 @@ import com.currencies.utils.view_binding.viewBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 
-class ConvertFragment : Fragment(R.layout.fragment_convert), ChildrenUpdateToolbarCallback {
+class ConvertFragment :
+    Fragment(R.layout.fragment_convert),
+    ChildrenUpdateToolbarCallback,
+    ChildrenHideNavigationCallback {
 
     private var fromCurrencyName by stringArgument()
     private var toCurrencyName by stringArgument()
@@ -31,6 +35,7 @@ class ConvertFragment : Fragment(R.layout.fragment_convert), ChildrenUpdateToolb
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         updateToolbar(ToolbarOptions.WithBackOptions(R.string.convert))
+        hideNavigation()
 
         setCurrenciesName()
         setupActions()

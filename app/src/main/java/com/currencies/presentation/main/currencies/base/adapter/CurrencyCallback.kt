@@ -1,4 +1,4 @@
-package com.currencies.presentation.main.currencies.base
+package com.currencies.presentation.main.currencies.base.adapter
 
 interface CurrencyCallback : OnCurrencyClickCallback {
     fun onAddCurrency(currencyName: String)
