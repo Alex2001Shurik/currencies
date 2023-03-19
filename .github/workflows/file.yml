@@ -4,20 +4,23 @@ on:
   # When it will be triggered
   # And in which branch
   pull_request:
+    branches: [ main ]
   push:
-    branches:
-      - neeeew
+    branches: [ main ]
 # Where will they run
 jobs:
-  build:
+  lint:
 
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
-        uses: actions/checkout@v2.3.3
+        uses: actions/checkout@v3
 
-      - name: Set up our JDK environment
-        uses: actions/setup-java@v1.4.3
+      - name: Run lint
+        uses: ./gradlew lintDebug
+
+      - name: Uploat lint violations
+        uses: actions/upload-artifact@v2
         with:
-          java-version: 1.8
+          name: lint.html
+          path: app/build/reports/lint-results-debug.html
