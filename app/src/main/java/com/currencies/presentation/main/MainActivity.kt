@@ -9,10 +9,7 @@ import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import com.currencies.R
 import com.currencies.databinding.ActivityMainBinding
-import com.currencies.presentation.main.callback.activity.ParentGetSearchQueryCallback
-import com.currencies.presentation.main.callback.activity.ParentHideNavigationCallback
-import com.currencies.presentation.main.callback.activity.ParentOnTextChangedCallback
-import com.currencies.presentation.main.callback.activity.ParentUpdateToolbarCallback
+import com.currencies.presentation.main.callback.activity.*
 import com.currencies.utils.view_binding.viewBinding
 import org.koin.android.ext.android.inject
 import org.koin.core.context.loadKoinModules
@@ -28,9 +25,7 @@ class MainActivity :
 
     private val binding by viewBinding(ActivityMainBinding::inflate)
 
-    private val mainNavigationModule = module {
-        single { MainNavigator(supportFragmentManager, R.id.container) }
-    }
+    private val mainNavigationModule = module { single { MainNavigator(supportFragmentManager, R.id.container) } }
 
     private val mainNavigator by inject<MainNavigator>()
 
